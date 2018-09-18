@@ -1,0 +1,162 @@
+*{
+    font-family: 'Open Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #ffffff;
+
+}
+
+/*uso css grid*/
+.container{
+    margin: 0 50px;
+    display: grid;
+    grid-template-columns: repeat(4,2fr);
+    grid-template-rows: 100%;
+    grid-gap: 1vw;
+}
+
+
+nav{
+    width: 100%;
+    height: 60px;
+    background-color: #42A5F5;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+nav .cabezera-titulo{
+    font-size: 28px;
+    text-align: center;
+    color: #fff;
+    line-height: 60px;
+}
+
+.task-container{  
+    margin: 100px 20px;
+    background-color: #fff;
+    min-height: 300px;
+    padding-bottom: 15px;
+    border-radius: 2px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3); 
+}
+
+.todo-task{
+    width: 90%;
+    border-radius: 2px;
+    border: 2px solid #424953;
+    margin: 10px auto;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+
+.border-pending{
+    border: 1px solid #EF5350;
+}
+
+.border-inprogress{
+    border: 1px solid #ffa726;
+}
+
+.border-completed{
+    border: 1px solid #66BB6A;
+}
+
+.border-add{
+    border: 1px solid #838dff;
+}
+
+
+.task-list-header{
+    height: 50px;
+    text-align: center;;
+    color: #fff;
+    line-height: 50px;
+}
+
+.pending{
+    background-color: #EF5350;
+}
+
+.inprogress{
+    background-color: #ffa726;
+}
+
+.completed{
+    background-color: #66BB6A;
+}
+
+.add{
+    background-color: #838dff;
+}
+
+.todo-container{
+    width: 90%;
+    border-radius: 2px;
+    margin: 10px auto;
+    
+}
+
+.task-container input[type=text], textarea {
+    font-size: 16px;
+    width: 100%;
+    padding: 5px 20px;
+    border: 1px solid #b7b7b7;
+    margin: 5px 0;
+}
+
+textarea{
+    resize: none;
+    
+}
+
+.btn-blue{
+    width: 100%;
+    font-size: 16px;
+    padding: 10px 20px;
+    background: #42A5F5;
+    color: #fff;
+    margin: 5px 0;
+    text-align: center;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+input[type=button]{
+    width: 100%;
+    font-size: 16px;
+    padding: 10px 20px;
+    background: #42A5F5;
+    color: #fff;
+    margin: 10px 0;
+    text-align: center;
+    border:none;
+    border-radius: 2px;
+    cursor: pointer; 
+}
+
+.todo-task > .task-header{
+    font-weight: bold;
+}
+
+.todo-task > .task-date{
+    font-size: small;
+    font-style: italic;
+}
+
+.todo-task > .task-description{
+    font-size: smaller;
+}
+
+
+#delete-div{
+    display: none;
+    background-color: #fff;
+    border: 3px dotted #000;
+    margin: 10px;
+    height: 75px;
+    line-height: 75px;
+    text-align: center;
+}

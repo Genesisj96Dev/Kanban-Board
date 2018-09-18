@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tareas</title>
+	<link rel="stylesheet" href="css/styles-grid.css">
+	<link rel="stylesheet" href="js/jquery/jquery-ui-custom.min.css">
+</head>
+<body>
+
+    <!-- Titulo -->
+    <nav>
+        <h1 class="cabezera-titulo">Mis Tareas</h1>
+    </nav>
+
+
+	<div class="container" id="container">
+
+		<!-- Tablero Pendiente -->
+		<div class="task-container border-pending" id="pending" >
+            <h3 class="task-list-header pending">Pendiente</h3>
+            <div class="task-list">
+                
+            </div>
+        </div>
+
+		<!-- Tablero En progreso -->
+        <div class="task-container border-inprogress" id="inProgress">
+            <h3 class="task-list-header inprogress">En Progreso</h3> 
+             <div class="task-list">
+                
+            </div>
+        </div>
+	
+		<!-- Tablero Completado -->
+        <div class="task-container border-completed" id="completed">
+			<h3 class="task-list-header completed">Completado</h3>
+            <div class="task-list">
+                
+            </div>
+        </div>
+
+        <!-- Agregar tareas -->
+        <div class="task-container border-add">
+            <h3 class="task-list-header add">Agregar Tarea</h3>
+            <div class="todo-container">
+                <form id="todo-form">
+                    <input type="text" placeholder="Titulo" />
+                    <textarea placeholder="Descripción"></textarea>
+                    <input type="text" id="datepicker" placeholder="Fecha (dd/mm/yyyy)" />
+                    <input type="button" onclick="todo.add();" value="Agregar" />
+                </form>
+
+                <!-- <input type="button" onclick="todo.clear();" value="Limpiar" /> -->
+
+                <div id="delete-div">
+                    Arrastrar para eliminar
+                </div>
+            </div>
+
+        </div>
+	</div>
+
+  	<script type="text/javascript" src="js/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery/jquery-ui-custom.min.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+
+	<script type="text/javascript">
+    	$( "#datepicker" ).datepicker();
+    	$( "#datepicker" ).datepicker("option", "dateFormat", "dd/mm/yy");
+
+    	$(".task-container").droppable();
+    	$(".todo-task").draggable({ revert: "valid", revertDuration:200 });
+    	todo.init();
+	</script>
+</body>
+</html>
